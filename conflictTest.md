@@ -1,5 +1,5 @@
 # Conflict Test File
 
-* Creating Conflict
+##  Creating Conflict
 
-** this is the line I want to change... 
+### this is the line I want to change... 
