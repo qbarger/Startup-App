@@ -7,3 +7,7 @@
 ### Design
 ![Expedition Extraterrestrial](https://github.com/qbarger/Startup-App/assets/54420597/67f0d492-a028-4b49-8056-941f0019a103)
 
+### Key Features
+##### Authentication: User will need to create an account and login in order to use the application. The application will keep track of information the user adds to the database.
+##### Database Data: The application will display any information users add with the connected object (Star, planet, etc.). Users will be able to see who added what information, and when that information was added.
+##### Websocket Data: Anytime a user adds information to the database, the application will display that a user is currently updating information.
