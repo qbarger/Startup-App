@@ -1,7 +1,7 @@
-# BE YOUR OWN GM
+# EXPEDITION EXTRATERRESTRIAL!
 ## Description Deliverable
 
 ### Elevator Pitch
-##### Have you ever wished to be in control of a major sports team? Have you ever wondered what a team of your favorite sports players would look like? Now you can try it yourself and make your own team with BE YOUR OWN GM! The BE YOUR OWN GM application allows you to be the general manager of your very own NBA team! Create and account, choose a city and team name, and then build your team from a database of all active NBA players! Your team will automatically sync to your account, and you will be able to see and edit your team. Not to mention you can check up and see what your friends are doing as well!
+##### Have you ever thought about the grandeur of our solar system? How does everything connect, and work together? What do the different planets look like, and how do they move? What are the newest discoveries in our little pocket of outer space? Expedition Extraterrestrial is the interactive map of our solar system that can answer all of your questions! Create an account, login, and begin exploring the beauty of space! See what Mercury, Venus, Mars, and the Gas Giants look like, and learn about how the planets and Sun interact. Do you have new info about our solar system? Expedition Extraterrestrial allows for users to add new info about our solar system, and then stores what they said and who said it. This allows for the program to keep up to date, and to be an ever-expanding source of knowledge about the planetary neighborhood in which we live!
 
 ### Design
