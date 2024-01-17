@@ -11,15 +11,17 @@
 ![Expedition Extraterrestrial-2](https://github.com/qbarger/Startup-App/assets/54420597/36c862d6-8260-4b74-8481-5e9a97c1066b)
 
 ### Key Features
-##### Authentication: User will need to create an account and login in order to use the application. The application will keep track of information the user adds to the database.
-##### Database Data: The application will display any information users add with the connected object (Star, planet, etc.). Users will be able to see who added what information, and when that information was added.
-##### Websocket Data: Anytime a user adds information to the database, the application will display that a user is currently updating information.
+##### Displays the solar system with relative orbits of planets.
+##### Allows users to select a planet and view facts about that planet (or star in the case of the Sun).
+##### Users can add information to a specific object's database to keep the system up to date.
+##### Information input by users is stored and displayed for others to see.
+##### Secure login over HTTPS.
 
 ### Technologies
-##### HTML:
-##### CSS:
-##### JavaScript:
-##### Service:
-##### DB/Login:
-##### WebSocket:
-##### React:
+##### HTML: I will use HTML for the structure of the application. It will have one page for login and a page displaying the solar system as a whole. It will also have a page displaying facts about a planet when the user selects one.
+##### CSS: I am going to use CSS to display the solar system and show the orbit paths of the planets.
+##### JavaScript: Allows for account creation and login. It will also display inputs added by other users.
+##### Service: It will use back end service for login and retrieving input from users.
+##### DB/Login: Database will store the input received from users. Allows for secure login and saves users' credentials. Can not view application without login.
+##### WebSocket: Whenever a user adds input for an object, it will be added to the related facts and displayed.
+##### React: Application will be updated to use the React web framework.
