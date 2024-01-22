@@ -6,3 +6,7 @@ Notes Page
 
 ###### Click here to go to my READ.md page...
 ###### https://github.com/qbarger/Startup-App/blob/e62e778708498f7b85ebfae913a95e4e375000ac/README.md
+
+## Hosting Domain
+
+#### I learned how the IP address is linked to the domain name. The users use the domain name because it is easier to understand. But the computer uses the IP address exclusively, which is linked to the domain name. 
