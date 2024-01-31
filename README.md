@@ -27,3 +27,11 @@
 ##### * DB/Login: Database will store the input received from users. Allows for secure login and saves users' credentials. Can not view application without login.
 ##### * WebSocket: Whenever a user adds input for an object, it will be added to the related facts and displayed.
 ##### * React: Application will be updated to use the React web framework.
+
+### HTML Deliverable
+##### * HTML pages: 13 HTML pages consisting of a login, account, and about page. 1 page each for The Sun and all 9 of the planets.
+##### * Links: The login links to either a create an account page or the main application page via a form element. On the main page each star/planet links to its own page.
+##### * Text: Each element is represented by text.
+##### * Images: Each page has images depicting either the planet, star, or space in general. The background for the main page is also an image.
+##### * DB/Login: There is an initial login page that accepts a username and password. The ability to see new information added to the page is pulled from the database.
+##### * Websocket: The page will inform you in real time when information is being added.
