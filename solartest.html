@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        $sun: 40px;
+        $mercury-orb : 70px; $mercury-pl: 4px; 
+        $venus-orb : 100px; $venus-pl: 8px; 
+        $earth-orb : 145px; $earth-pl: 6px; 
+        $mars-orb : 190px; $mars-pl: 6px;
+        $jupiter-orb : 340px; $jupiter-pl: 18px; 
+        $saturn-orb : 440px; $saturn-pl: 12px;
+        $uranus-orb : 520px; $uranus-pl: 10px;
+        $neptune-orb : 630px; $neptune-pl: 10px;
+        <style>         
+            #Sun {
+                background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin: 25%;
+                position: absolute;
+                top: -7%;
+                left: 20%;
+            }
+            #Mercury {
+                background-color: rgb(152, 61, 0);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                position:absolute;
+                left: 46%;
+                top: 46%;
+                animation: GFGMerc 7.23s infinite linear;
+            }
+            #Venus {
+                background-color: rgb(255, 128, 0);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                animation: GFGVen 18.455s infinite linear;
+            }
+            #Earth {
+                background: radial-gradient(ellipse at left,#724500,#17e02b,#0073ff);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 46%;
+                animation: GFGEarth 30s infinite linear;
+            }
+            #Mars {
+                background-color: rgb(255, 35, 35);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                animation: GFGMars 56.424s infinite linear;
+            }
+            #Jupiter {
+                background: radial-gradient(ellipse at center,rgb(211, 37, 37),rgb(255, 149, 0));
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                animation: GFGJup 355.8s infinite linear;
+            }
+            #Saturn {
+                background-color: rgb(255, 213, 0);
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                animation: GFGSat 883.8s infinite linear;
+            }
+            #Uranus {
+                background-color: rgb(0, 119, 255);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                animation: GFGUra 2520.3s infinite linear;
+            }
+            #Neptune {
+                background-color: rgb(99, 226, 255);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                animation: GFGNep 4943.7s infinite linear;
+            }
+            @keyframes GFGMerc { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(40px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(40px) rotate(-360deg); 
+                } 
+            } 
+            @keyframes GFGVen { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(80px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(80px) rotate(-360deg); 
+                } 
+            } 
+            @keyframes GFGEarth { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(110px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(110px) rotate(-360deg); 
+                } 
+            } 
+            @keyframes GFGMars { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(150px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(150px) rotate(-360deg); 
+                } 
+            }
+            @keyframes GFGJup { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(200px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(200px) rotate(-360deg); 
+                } 
+            }
+            @keyframes GFGSat { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(250px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(250px) rotate(-360deg); 
+                } 
+            }
+            @keyframes GFGUra { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(310px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(310px) rotate(-360deg); 
+                } 
+            }
+            @keyframes GFGNep { 
+                0% { 
+                    transform: rotate(0deg)  
+                          translateY(340px) rotate(0deg); 
+                } 
+      
+                100% { 
+                    transform: rotate(360deg)  
+                          translateY(340px) rotate(-360deg); 
+                } 
+            }
+        </style> 
+        <body style="background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');">
+            <header>
+                <div>
+                    <p style="color:white;float: right;margin-top: 0;">User: JDoe</p>  
+                </div>
+                <div>
+                    <p style="color:white;margin-top: 0;">EXPEDITION EXTRATERRESTRIAL</p>
+                </div>
+            </header>
+            <main>
+                <h3 style="color:white" align="left">
+                    <form method="get" action="sun.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Sun</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="mercury.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Mercury</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="venus.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Venus</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="earth.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Earth</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="mars.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Mars</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="jupiter.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Jupiter</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="saturn.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Saturn</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="uranus.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Uranus</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="neptune.html">
+                        <button style="background-color: black;color: rgb(0, 221, 255);border-color: black;border: 0;padding: 0%;font-size: larger;" type="submit">Neptune</button> 
+                    </form>
+                    <br/>
+                </h3>
+                <div id="Sun"></div>
+                <div id="Mercury"></div>
+                <div id="Venus"></div>
+                <div id="Earth"></div>
+                <div id="Mars"></div>
+                <div id="Jupiter"></div>
+                <div id="Saturn"></div>
+                <div id="Uranus"></div>
+                <div id="Neptune"></div>
+            </main>
+            <footer>     
+                <p style="color: white;"><a style="color:rgb(0, 221, 255);" href="http://127.0.0.1:5501/about.html?">About</a></p>
+            </footer>
+        </body>
+    </head>
+</html>
