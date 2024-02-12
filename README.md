@@ -35,3 +35,6 @@
 ##### * Images: Each page has images depicting either the planet, star, or space in general. The background for the main page is also an image.
 ##### * DB/Login: There is an initial login page that accepts a username and password. The ability to see new information added to the page is pulled from the database.
 ##### * Websocket: The page will inform you in real time when information is being added.
+
+### CSS Deliverable
+##### * Header, footer, and main body content. 
