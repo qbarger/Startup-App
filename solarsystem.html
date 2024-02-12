@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         $sun: 40px;
-        $mercury-orb : 70px; $mercury-pl: 4px; 
-        $venus-orb : 100px; $venus-pl: 8px; 
-        $earth-orb : 145px; $earth-pl: 6px; 
-        $mars-orb : 190px; $mars-pl: 6px;
-        $jupiter-orb : 340px; $jupiter-pl: 18px; 
-        $saturn-orb : 440px; $saturn-pl: 12px;
-        $uranus-orb : 520px; $uranus-pl: 10px;
-        $neptune-orb : 630px; $neptune-pl: 10px;
-        <style>         
+            $mercury-orb : 70px; $mercury-pl: 4px; 
+            $venus-orb : 100px; $venus-pl: 8px; 
+            $earth-orb : 145px; $earth-pl: 6px; 
+            $mars-orb : 190px; $mars-pl: 6px;
+            $jupiter-orb : 340px; $jupiter-pl: 18px; 
+            $saturn-orb : 440px; $saturn-pl: 12px;
+            $uranus-orb : 520px; $uranus-pl: 10px;
+            $neptune-orb : 630px; $neptune-pl: 10px;
+
+        <style> 
+            #SolarSystem {
+                content: "";
+                position:absolute;
+                height:2px;
+                width:2px;
+                top:-2px;
+            }
             #Sun {
                 background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
                 width: 40px;
                 height: 40px;
+                position:absolute;
+                margin-top: 35vh;
                 border-radius: 50%;
-                margin: 25%;
-                position: absolute;
-                top: -7%;
-                left: 20%;
             }
             #Mercury {
                 background-color: rgb(152, 61, 0);
@@ -27,8 +35,8 @@
                 height: 5px;
                 border-radius: 50%;
                 position:absolute;
-                left: 46%;
-                top: 46%;
+                margin-top: 37.5vh;
+                margin-left: 20px;
                 animation: GFGMerc 7.23s infinite linear;
             }
             #Venus {
@@ -37,8 +45,8 @@
                 height: 8px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 47%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGVen 18.455s infinite linear;
             }
             #Earth {
@@ -47,8 +55,8 @@
                 height: 8px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 46%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGEarth 30s infinite linear;
             }
             #Mars {
@@ -57,8 +65,8 @@
                 height: 5px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 47%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGMars 56.424s infinite linear;
             }
             #Jupiter {
@@ -67,8 +75,8 @@
                 height: 18px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 47%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGJup 355.8s infinite linear;
             }
             #Saturn {
@@ -77,8 +85,8 @@
                 height: 12px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 47%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGSat 883.8s infinite linear;
             }
             #Uranus {
@@ -87,8 +95,8 @@
                 height: 10px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 47%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGUra 2520.3s infinite linear;
             }
             #Neptune {
@@ -97,8 +105,8 @@
                 height: 10px;
                 border-radius: 50%;
                 position: absolute;
-                left: 47%;
-                top: 47%;
+                margin-left: 20px;
+                margin-top: 37.5vh;
                 animation: GFGNep 4943.7s infinite linear;
             }
             @keyframes GFGMerc { 
@@ -187,71 +195,85 @@
                 100% { 
                     transform: rotate(360deg)  
                           translateY(340px) rotate(-360deg); 
-                } 
+                }
+            }
+            main {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+            }
+            section:nth-child(1){
+                flex: 1;
+            }
+            section:nth-child(2) {
+                flex: 6;
             }
         </style> 
-        <body style="background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');">
+        <!-- background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D'); -->
+        <body style="background-color: rgb(0, 0, 0); flex: 1;display: flex;flex-direction: column;">
             <header>
-                <div>
-                    <p style="color:white;float: right;margin-top: 0;">User: JDoe</p>  
-                </div>
-                <div>
-                    <h3 style="color:white;margin-top: -1%;">EXPEDITION EXTRATERRESTRIAL</h3>
-                </div>
+                <p style="color:white;float: right;margin-top: -1%;">User: JDoe</p>  
+                <h3 style="color:white;margin-top: -1%;">EXPEDITION EXTRATERRESTRIAL</h3>
+                <br/>
             </header>
-            <main>
-                <h3 style="color:white" align="left">
-                    <form method="get" action="sun.html">
-                        <button style="font-size: larger;color:black;" type="submit">Sun</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="mercury.html">
-                        <button style="color: black;font-size: larger;" type="submit">Mercury</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="venus.html">
-                        <button style="color: black;font-size: larger;" type="submit">Venus</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="earth.html">
-                        <button style="color: black;font-size: larger;" type="submit">Earth</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="mars.html">
-                        <button style="color: black;font-size: larger;" type="submit">Mars</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="jupiter.html">
-                        <button style="color: black;font-size: larger;" type="submit">Jupiter</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="saturn.html">
-                        <button style="color: black;font-size: larger;" type="submit">Saturn</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="uranus.html">
-                        <button style="color: black;font-size: larger;" type="submit">Uranus</button> 
-                    </form>
-                    <br/><br/>
-                    <form method="get" action="neptune.html">
-                        <button style="color: black;font-size: larger;" type="submit">Neptune</button> 
-                    </form>
-                    <br/>
-                </h3>
-                <div id="Sun"></div>
-                <div id="Mercury"></div>
-                <div id="Venus"></div>
-                <div id="Earth"></div>
-                <div id="Mars"></div>
-                <div id="Jupiter"></div>
-                <div id="Saturn"></div>
-                <div id="Uranus"></div>
-                <div id="Neptune"></div>
+            <main style="flex: 1;display: flex;flex-direction: row;">
+                <section style="flex: 1;color:white" align="left">
+                        <form method="get" action="sun.html">
+                            <button style="font-size: larger;color:black;" type="submit">Sun</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="mercury.html">
+                            <button style="color: black;font-size: larger;" type="submit">Mercury</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="venus.html">
+                            <button style="color: black;font-size: larger;" type="submit">Venus</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="earth.html">
+                            <button style="color: black;font-size: larger;" type="submit">Earth</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="mars.html">
+                            <button style="color: black;font-size: larger;" type="submit">Mars</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="jupiter.html">
+                            <button style="color: black;font-size: larger;" type="submit">Jupiter</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="saturn.html">
+                            <button style="color: black;font-size: larger;" type="submit">Saturn</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="uranus.html">
+                            <button style="color: black;font-size: larger;" type="submit">Uranus</button> 
+                        </form>
+                        <br/><br/>
+                        <form method="get" action="neptune.html">
+                            <button style="color: black;font-size: larger;" type="submit">Neptune</button> 
+                        </form>
+                        <br/><br/>
+                        <form style="color:black;" method="get" action="about.html">
+                            <button style="background-color: black; color: white;font-size: larger;" type="submit">About</button> 
+                        </form>
+                </section>
+                <section style="flex: 1">
+                    <div id="#SolarSystem">
+                        <div id="Sun"></div>
+                        <div id="Mercury"></div>
+                        <div id="Venus"></div>
+                        <div id="Earth"></div>
+                        <div id="Mars"></div>
+                        <div id="Jupiter"></div>
+                        <div id="Saturn"></div>
+                        <div id="Uranus"></div>
+                        <div id="Neptune"></div>
+                    </div>
+                </section>
             </main>
             <footer>     
-                <form style="color:black;" method="get" action="about.html">
-                    <button style="background-color: black; color: white;font-size: larger;" type="submit">About</button> 
-                </form>
+                
             </footer>
         </body>
     </head>
