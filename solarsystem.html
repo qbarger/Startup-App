@@ -3,212 +3,15 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <style> 
-            #SolarSystem {
-                content: "";
-                position:absolute;
-                height:2px;
-                width:2px;
-                top:-2px;
-            }
-            #Sun {
-                background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
-                width: 40px;
-                height: 40px;
-                position:absolute;
-                margin-top: 35vh;
-                border-radius: 50%;
-            }
-            #Mercury {
-                background-color: rgb(152, 61, 0);
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                position:absolute;
-                margin-top: 37.5vh;
-                margin-left: 20px;
-                animation: GFGMerc 7.23s infinite linear;
-            }
-            #Venus {
-                background-color: rgb(255, 128, 0);
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGVen 18.455s infinite linear;
-            }
-            #Earth {
-                background: radial-gradient(ellipse at left,#724500,#17e02b,#0073ff);
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGEarth 30s infinite linear;
-            }
-            #Mars {
-                background-color: rgb(255, 35, 35);
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGMars 56.424s infinite linear;
-            }
-            #Jupiter {
-                background: radial-gradient(ellipse at center,rgb(211, 37, 37),rgb(255, 149, 0));
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGJup 355.8s infinite linear;
-            }
-            #Saturn {
-                background-color: rgb(255, 213, 0);
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGSat 883.8s infinite linear;
-            }
-            #Uranus {
-                background-color: rgb(99, 226, 255);
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGUra 2520.3s infinite linear;
-            }
-            #Neptune {
-                background-color: rgb(0, 119, 255);
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                position: absolute;
-                margin-left: 20px;
-                margin-top: 37.5vh;
-                animation: GFGNep 4943.7s infinite linear;
-            }
-            @keyframes GFGMerc { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(40px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(40px) rotate(-360deg); 
-                } 
-            } 
-            @keyframes GFGVen { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(80px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(80px) rotate(-360deg); 
-                } 
-            } 
-            @keyframes GFGEarth { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(110px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(110px) rotate(-360deg); 
-                } 
-            } 
-            @keyframes GFGMars { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(150px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(150px) rotate(-360deg); 
-                } 
-            }
-            @keyframes GFGJup { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(200px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(200px) rotate(-360deg); 
-                } 
-            }
-            @keyframes GFGSat { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(250px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(250px) rotate(-360deg); 
-                } 
-            }
-            @keyframes GFGUra { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(310px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(310px) rotate(-360deg); 
-                } 
-            }
-            @keyframes GFGNep { 
-                0% { 
-                    transform: rotate(0deg)  
-                          translateY(340px) rotate(0deg); 
-                } 
-      
-                100% { 
-                    transform: rotate(360deg)  
-                          translateY(340px) rotate(-360deg); 
-                }
-            }
-            main {
-                flex: 1;
-                display: flex;
-                flex-direction: row;
-            }
-            section:nth-child(1){
-                flex: 1;
-            }
-            section:nth-child(2) {
-                flex: 6;
-            }
-        </style> 
-        <!-- background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D'); -->
-        <body style="background-color: rgb(0, 0, 0); flex: 1;display: flex;flex-direction: column;">
+        <link rel="stylesheet" href="solarsystem.css">
+        <body>
             <header>
-                <p style="color:white;float: right;margin-top: 1%;">User: JDoe</p>  
-                <h3 style="color:white;margin-top: 1%;">EXPEDITION EXTRATERRESTRIAL</h3>
+                <p>User: JDoe</p>  
+                <h3>EXPEDITION EXTRATERRESTRIAL</h3>
                 <br/>
             </header>
-            <main style="flex: 1;display: flex;flex-direction: row;">
-                <section style="flex: 1;color:white" align="left">
+            <main>
+                <section>
                         <form method="get" action="sun.html">
                             <button type="button" class="btn btn-outline-light">Sun</button> 
                         </form>
@@ -264,7 +67,6 @@
                 </section>
             </main>
             <footer>     
-                
             </footer>
         </body>
     </head>
