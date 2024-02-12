@@ -39,7 +39,7 @@
 ### CSS Deliverable
 ##### * Header, footer, and main body content for each page.
 ##### * Navigation Elements: I added buttons to the solar system page to easily get to information about each planet. The button to the About page is contrasted in color to the other buttons. I kept anchor elements white to match the rest of the pages.
-##### * Responsive to window sizing:
+##### * Responsive to window sizing: Sun stays centered and distances are consistent as window is resized.
 ##### * Application Elements: Good contrast of colors and the atmosphere of space is represented well.
 ##### * Application Text Context: Consistent text type and sizing used throughout the whole application.
 ##### * Application Images: Same space image from the about page. I also added an image of each planet to it's respective page.
