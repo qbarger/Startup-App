@@ -35,3 +35,11 @@
 ##### * Images: Each page has images depicting either the planet, star, or space in general. The background for the main page is also an image.
 ##### * DB/Login: There is an initial login page that accepts a username and password. The ability to see new information added to the page is pulled from the database.
 ##### * Websocket: The page will inform you in real time when information is being added.
+
+### CSS Deliverable
+##### * Header, footer, and main body content for each page.
+##### * Navigation Elements: I added buttons to the solar system page to easily get to information about each planet. The button to the About page is contrasted in color to the other buttons. I kept anchor elements white to match the rest of the pages.
+##### * Responsive to window sizing: Sun stays centered and distances are consistent as window is resized.
+##### * Application Elements: Good contrast of colors and the atmosphere of space is represented well.
+##### * Application Text Context: Consistent text type and sizing used throughout the whole application.
+##### * Application Images: Same space image from the about page. I also added an image of each planet to it's respective page.
