@@ -187,7 +187,7 @@ main {
     flex-direction: row;
 }
 section:nth-child(1){
-    flex: 1;
+    flex: 1.25;
 }
 section:nth-child(2) {
     flex: 1;
