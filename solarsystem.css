@@ -209,7 +209,13 @@ body {
     flex-direction: column;
 }
 
-div {
+div.player {
+    color:white;
+    float: right;
+    margin-top: 1%;
+}
+
+div.simulate {
     color:white;
     float: right;
     margin-top: 1%;
