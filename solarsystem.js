@@ -1,6 +1,8 @@
 
 const userNameEl = document.querySelector('.player-name');
 userNameEl.textContent = this.getPlayerName();
+
+let sun = 'the Sun';
     
 
 function getPlayerName() {
@@ -43,11 +45,6 @@ setInterval(() => {
     chatText.innerHTML = `<div class="simulate"><span class="players">John</span> visited ${planet}! </div></br>` + chatText.innerHTML;
 }, 5000);
 
-/*
-setInterval(() => {
-    const score = Math.floor(Math.random() * 3000);
-    const chatText = document.querySelector('#player-messages');
-    chatText.innerHTML =
-    `<section class="simulate"><span class="player-messages">John</span> visited ${score} </section>` + chatText.innerHTML;
-  }, 5000);
-*/
+function Sun(){
+    localStorage.setItem("sun", sun);
+}

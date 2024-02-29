@@ -43,3 +43,9 @@
 ##### * Application Elements: Good contrast of colors and the atmosphere of space is represented well.
 ##### * Application Text Context: Consistent text type and sizing used throughout the whole application.
 ##### * Application Images: Same space image from the about page. I also added an image of each planet to it's respective page.
+
+### JavaScript Deliverable
+##### * login: When you enter your login information it stores the it and takes you to the solar system page.
+##### * database: Username is displayed on every page. Currently it is stored in localstorage, but it will be replaced with the database.
+##### * WebSocket: A setInterval function was used to intermittently display what planets other users had visited. This will be replaced by WebSocket.
+##### * Application logic: Application will track which planets you visit during your exploration.
