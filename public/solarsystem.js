@@ -42,7 +42,7 @@ setInterval(() => {
         planet = "Neptune";
     }
     const chatText = document.querySelector('#player-messages');
-    chatText.innerHTML = `<div class="simulate"><span class="players">John</span> visited ${planet}! </div></br>` + chatText.innerHTML;
+    chatText.innerHTML = `<span class="simulate"><span class="players">John</span> visited ${planet}! </span></br>` + chatText.innerHTML;
 }, 5000);
 
 function Sun(){

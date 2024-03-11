@@ -209,13 +209,19 @@ body {
     flex-direction: column;
 }
 
-div.player {
+span.player {
     color:white;
     float: right;
     margin-top: 1%;
 }
 
-div.simulate {
+span #player-messages {
+    color:white;
+    float: right;
+    margin-top: 1%;
+}
+
+span.simulate {
     color:white;
     float: right;
     margin-top: 1%;
