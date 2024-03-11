@@ -49,3 +49,10 @@
 ##### * database: Username is displayed on every page. Currently it is stored in localstorage, but it will be replaced with the database.
 ##### * WebSocket: A setInterval function was used to intermittently display what planets other users had visited. This will be replaced by WebSocket.
 ##### * Application logic: Application will track which planets you visit during your exploration.
+
+### Service Deliverable
+##### * Node.js/Express HTTP Service: Done.
+##### * Static Middleware for Frontend: Done.
+##### * Calls to Third-Party Endpoints: 
+##### * Backend Service Endpoints:
+##### * Frontend Calls Service Endpoints:
