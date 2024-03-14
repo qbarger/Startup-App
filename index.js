@@ -29,7 +29,7 @@ app.listen(port, () => {
 let travelLog = [];
 function updateLog(planet, travelLog){
     let found = false;
-    travelLog.array.forEach(element => {
+    travelLog.forEach(element => {
         if(element === planet){
             found = true;
         }

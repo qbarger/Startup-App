@@ -17,7 +17,7 @@
     animation: GFGMerc 7.23s infinite linear;
 }
 #Venus {
-    background-color: rgb(255, 128, 0);
+    background: radial-gradient(ellipse at right, rgb(212, 174, 123), rgb(151, 94, 37));
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -64,13 +64,7 @@
     position: absolute;
     margin-left: 20px;
     margin-top: 37.5vh;
-    animation: GFGSat 883.8s infinite linear;
-}
-
-#ellipse {
-    position: absolute;
-    margin-left: 20px;
-    margin-top: 37.5vh;
+    box-shadow: 0 1px 0 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
     animation: GFGSat 883.8s infinite linear;
 }
 
