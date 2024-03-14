@@ -6,8 +6,6 @@ function getPlayerName() {
     return localStorage.getItem('username') ?? 'Unkown';
 }
 
-getTravelLog();
-
 let a = ("the Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune");
 
 setInterval(() => {
@@ -52,7 +50,7 @@ async function setTravelLog(planetName){
         const response = await fetch('/api/update', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
-            body: JSON.stringify(plan),
+            body: JSON.stringify(planetName),
         });
         travelLog = await response.json();
         localStorage.setItem('travelLog', JSON.stringify(travelLog));
@@ -95,4 +93,6 @@ async function getTravelLog(){
         }
     }
 }
+
+getTravelLog();
 

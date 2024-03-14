@@ -9,14 +9,6 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use('/api', apiRouter);
 
-app.use((_req, res) => {
-    res.sendFile('index.html', {root: 'public'});
-});
-
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
-
 apiRouter.get('/log', (_req, res) => {
     res.send(travelLog);
 });
@@ -24,6 +16,14 @@ apiRouter.get('/log', (_req, res) => {
 apiRouter.post('/update', (req, res) => {
     travelLog = updateLog(req.body, travelLog);
     res.send(travelLog);
+});
+
+app.use((_req, res) => {
+    res.sendFile('index.html', {root: 'public'});
+});
+
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 });
 
 let travelLog = [];
