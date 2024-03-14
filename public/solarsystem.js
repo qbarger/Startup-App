@@ -42,11 +42,9 @@ setInterval(() => {
     chatText.innerHTML = `<span class="simulate"><span class="players">John</span> visited ${planet}! </span></br>` + chatText.innerHTML;
 }, 5000);
 
-const fetch = require('node-fetch');
-
 async function setTravelLog(planetName){
     let travelLog = [];
-    
+    const fetch = require('node-fetch');
     try {
         const response = await fetch('/api/update', {
             method: 'POST',
