@@ -16,3 +16,26 @@ app.use((_req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
+
+apiRouter.get('/log', (_req, res) => {
+    res.send(travelLog);
+});
+
+apiRouter.post('/update', (req, res) => {
+    travelLog = updateLog(req.body, travelLog);
+    res.send(travelLog);
+});
+
+let travelLog = [];
+function updateLog(planet, travelLog){
+    let found = false;
+    travelLog.array.forEach(element => {
+        if(element === planet){
+            found = true;
+        }
+    });
+    if(!found){
+        travelLog.push(planet);
+    }
+    return travelLog;
+}
