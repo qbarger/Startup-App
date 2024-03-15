@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "express": "^4.18.3",
-    "node-fetch": "^3.3.2",
-    "type": "module"
+    "node-fetch": "^3.3.2"
   }
 }
