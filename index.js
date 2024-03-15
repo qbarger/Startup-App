@@ -19,7 +19,7 @@ apiRouter.post('/update', (req, res) => {
 });
 
 app.use((_req, res) => {
-    res.sendFile('index.html', {root: 'public'});
+    res.sendFile('solarsystem.html', {root: 'public'});
 });
 
 app.listen(port, () => {
