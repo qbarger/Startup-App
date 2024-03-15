@@ -44,7 +44,6 @@ setInterval(() => {
 
 async function setTravelLog(planetName){
     let travelLog = [];
-    const fetch = require('node-fetch');
     try {
         const response = await fetch('/api/update', {
             method: 'POST',
@@ -74,7 +73,7 @@ async function setTravelLog(planetName){
 }
 
 async function getTravelLog(){
-    let travelLog = [];
+    let travelLog = ['sun'];
     try {
         const response = await fetch('/api/log');
         travelLog = await response.json();
@@ -82,7 +81,9 @@ async function getTravelLog(){
 
         travelLog.forEach(names => {
             if(names === 'sun'){
-                document.getElementById('#Sun').className = 'btn btn-outline-primary';
+                const element = document.getElementById('#sun');
+                element.classList.remove("btn btn-outline-light");
+                element.classList.add("btn btn-outline-primary");
             }
         });
     } catch {
