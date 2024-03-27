@@ -27,8 +27,18 @@
                     <input type="password" id="password" placeholder="Your password here" required/>
                     <br/>
                     <br/>
-                    <button align="center" type="submit" onclick="nameLogin()">Login</button>
+                    <button align="center" type="submit" onclick="loginUser()">Login</button>
                 </form>
+                <div class="modal fade" id="msgModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-dark">
+                            <div class="modal-body">error message here</div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <br/>
             </main>
             <footer>
