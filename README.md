@@ -53,6 +53,6 @@
 ### Service Deliverable
 ##### * Node.js/Express HTTP Service: Done.
 ##### * Static Middleware for Frontend: Done.
-##### * Calls to Third-Party Endpoints: 
-##### * Backend Service Endpoints:
-##### * Frontend Calls Service Endpoints:
+##### * Calls to Third-Party Endpoints: Calls to third-party endpoint to retrieve a quote for the about page.
+##### * Backend Service Endpoints: Calls to the backend to keep track of which planets the user has visited.
+##### * Frontend Calls Service Endpoints: I accomplished this using the fetch function.
