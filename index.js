@@ -9,9 +9,11 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use('/api', apiRouter);
 
+/*
 apiRouter.get('/log', (_req, res) => {
     res.send(travelLog);
 });
+*/
 
 apiRouter.post('/update', (req, res) => {
     travelLog = updateLog(req.body, travelLog);
@@ -29,8 +31,8 @@ app.listen(port, () => {
 let travelLog = [];
 function updateLog(planet, travelLog){
     let found = false;
-    for(var element of travelLog){
-        if(element === planet){
+    for(var i = 0; i < travelLog.length; i++){
+        if(travelLog[i] === planet){
             found = true;
         }
     }
