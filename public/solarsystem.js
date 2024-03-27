@@ -82,12 +82,7 @@ async function setTravelLog(planetNumber) {
 
 async function getTravelLog() {
     let travelLog = [];
-    /*
-    const travelLogText = sessionStorage.getItem('travelLog');
-    if (travelLogText) {
-        travelLog = JSON.parse(travelLogText);
-    }
-    */
+    
     const travelLogText = sessionStorage.getItem('travelLog');
     travelLog = JSON.parse(travelLogText);
     for (let i = 0; i < travelLog.length; i++) {

@@ -1,19 +1,20 @@
+const cookieParser = require('cookie-parser');
+const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
+
+const authCookieName = 'token';
 
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
 app.use(express.json());
 app.use(express.static('public'));
+app.use(cookieParser());
+app.set('trust proxy', true);
 
 var apiRouter = express.Router();
 app.use('/api', apiRouter);
-
-/*
-apiRouter.get('/log', (_req, res) => {
-    res.send(travelLog);
-});
-*/
 
 apiRouter.post('/update', (req, res) => {
     travelLog = updateLog(req.body, travelLog);
