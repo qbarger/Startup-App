@@ -56,6 +56,7 @@ function logout(){
     }).then(() => (window.location.href = '/'));
 }
 
+/*
 async function getUser(email){
     const response = await fetch(`/api/user/${email}`);
     if(response.status === 200){
@@ -63,3 +64,4 @@ async function getUser(email){
     }
     return null;
 }
+*/
