@@ -1,16 +1,3 @@
-/*
-function nameLogin() {
-    const nameEL = document.querySelector('#name');
-    localStorage.setItem('username', nameEL.value);
-    window.location.href = "solarsystem.html";
-}
-
-function passLogin() {
-    const passEL = document.querySelector('password');
-    localStorage.setItem('password', passEL.value);
-}
-*/
-
 (async () => {
     const userName = localStorage.getItem('username');
     if (userName) {
@@ -27,11 +14,11 @@ async function createUser() {
 }
 
 async function signInOrUp(endpoint){
-    const userName = document.querySelector('#name');
-    const password = document.querySelector('#password');
+    const userName = document.querySelector('#name')?.value;
+    const password = document.querySelector('#password')?.value;
     const response = await fetch(endpoint, {
         method: 'post',
-        body: JSON.stringify({ email: userName, password: password }),
+        body: JSON.stringify({ name: userName, password: password }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
@@ -55,13 +42,3 @@ function logout(){
         method: 'delete',
     }).then(() => (window.location.href = '/'));
 }
-
-/*
-async function getUser(email){
-    const response = await fetch(`/api/user/${email}`);
-    if(response.status === 200){
-        return response.json();
-    }
-    return null;
-}
-*/
