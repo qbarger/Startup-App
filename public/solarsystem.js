@@ -124,6 +124,7 @@ function getElementId(planetNumber) {
 
 function logout(){
     localStorage.removeItem(`userName`);
+    sessionStorage.removeItem('travelLog');
     fetch(`/api/auth/logout`, {
         method: 'delete',
     }).then(() => (window.location.href = '/'));
