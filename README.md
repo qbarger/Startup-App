@@ -56,3 +56,11 @@
 ##### * Calls to Third-Party Endpoints: Calls to third-party endpoint to retrieve a quote for the about page.
 ##### * Backend Service Endpoints: Calls to the backend to keep track of which planets the user has visited.
 ##### * Frontend Calls Service Endpoints: I accomplished this using the fetch function.
+
+### DB/Login Deliverable
+##### * MongoDB Atlas database created: Done.
+##### * Stores data in MongoDB: Done.
+##### * User registration: Registers new accounts in the MongoDB database.
+##### * Logout resets history: Logging out resets the session storage and travelLog.
+##### * Use MongoDB to store credentials: Stores user information in the database.
+##### * Restricts functionality: You cannot explore or access the solar system until you have logged in. 
