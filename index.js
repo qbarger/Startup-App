@@ -63,7 +63,7 @@ secureApiRouter.use(async (req, res, next) => {
     }
 });
 
-apiRouter.post('/update', (req, res) => {
+secureApiRouter.post('/update', (req, res) => {
     travelLog = updateLog(req.body, travelLog);
     res.send(travelLog);
 });
