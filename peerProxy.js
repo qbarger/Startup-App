@@ -10,7 +10,7 @@ function peerProxy(httpServer){
         });
     });
 
-    let connections = {};
+    let connections = [];
 
     wss.on('connection', (ws) => {
         const connection = { id: uuid.v4(), alive: true, ws: ws };

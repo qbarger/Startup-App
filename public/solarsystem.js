@@ -8,6 +8,7 @@ function getPlayerName() {
     return localStorage.getItem('username') ?? 'Unkown';
 }
 
+/*
 let a = ("the Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune");
 
 setInterval(() => {
@@ -43,6 +44,7 @@ setInterval(() => {
     const chatText = document.querySelector('#player-messages');
     chatText.innerHTML = `<span class="simulate"><span class="players">John</span> visited ${planet}! </span></br>` + chatText.innerHTML;
 }, 5000);
+*/
 
 
 async function setTravelLog(planetNumber) {
@@ -97,6 +99,7 @@ async function getTravelLog() {
             }
         }
     }
+    this.configureWebSocket();
 }
 
 function getElementId(planetNumber) {
@@ -136,10 +139,10 @@ function configureWebSocket() {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
     this.socket.onopen = (event) => {
-        this.displayMsg('system', 'game', 'connected');
+        //this.displayMsg('system', 'game', 'connected');
     };
     this.socket.onclose = (event) => {
-        this.displayMsg('system', 'game', 'disconnected');
+        this.displayMsg('players', 'You', 'traveled to ');
     };
     this.socket.onmessage = async (event) => {
         const msg = JSON.parse(await event.data.text());
@@ -149,7 +152,7 @@ function configureWebSocket() {
 
 function displayMsg(cls, from, msg) {
     const chatText = document.querySelector('#player-messages');
-    chatText.innerHTML = `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+    chatText.innerHTML = `<span class="simulate"><span class="${cls}">${from}</span> ${msg}</span></br>` + chatText.innerHTML;
 }
 
 function broadcastEvent(from, type, value){
