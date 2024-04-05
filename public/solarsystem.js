@@ -130,5 +130,9 @@ function logout(){
     }).then(() => (window.location.href = '/'));
 }
 
+configureWebSocket() {
+    
+}
+
 getTravelLog();
 
