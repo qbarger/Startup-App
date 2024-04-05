@@ -1,5 +1,7 @@
 const userNameEl = document.querySelector('.player-name');
 userNameEl.textContent = this.getPlayerName();
+
+const travelEvent = 'travel';
     
 
 function getPlayerName() {
@@ -130,8 +132,33 @@ function logout(){
     }).then(() => (window.location.href = '/'));
 }
 
-configureWebSocket() {
-    
+function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    this.socket.onopen = (event) => {
+        this.displayMsg('system', 'game', 'connected');
+    };
+    this.socket.onclose = (event) => {
+        this.displayMsg('system', 'game', 'disconnected');
+    };
+    this.socket.onmessage = async (event) => {
+        const msg = JSON.parse(await event.data.text());
+        this.displayMsg('player', msg.from, `traveled to ${msg.value.planet}`);
+    };
+}
+
+function displayMsg(cls, from, msg) {
+    const chatText = document.querySelector('#player-messages');
+    chatText.innerHTML = `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+}
+
+function broadcastEvent(from, type, value){
+    const event = {
+        from: from,
+        type: type,
+        value: value,
+    };
+    this.socket.send(JSON.stringify(event));
 }
 
 getTravelLog();
