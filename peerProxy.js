@@ -31,6 +31,10 @@ function peerProxy(httpServer){
                 connections.splice(pos, 1);
             }
         })
+
+        ws.on('pong', () => {
+            connection.alive = true;
+        });
     });
 
     setInterval(() => {
@@ -42,7 +46,7 @@ function peerProxy(httpServer){
                 element.ws.ping();
             }
         });
-    }, 1000);
+    }, 10000);
 }
 
 module.exports = { peerProxy };
