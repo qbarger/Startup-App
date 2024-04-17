@@ -47,9 +47,6 @@ apiRouter.delete('/auth/logout', (_req, res) => {
     res.status(204).end();
 });
 
-//need logout api
-//need a getUser api
-
 var secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
