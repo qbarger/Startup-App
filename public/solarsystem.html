@@ -31,35 +31,35 @@
                     </form>
                     <br/><br/>
                     <form method="get" action="mercury.html">
-                        <button id="mercury" type="submit" onclick="setTravelLog(2)" class="btn btn-outline-light">Mercury</button> 
+                        <button id="mercury" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 2)" class="btn btn-outline-light">Mercury</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="venus.html">
-                        <button id="venus" type="submit" onclick="setTravelLog(3)" class="btn btn-outline-light">Venus</button> 
+                        <button id="venus" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 3)" class="btn btn-outline-light">Venus</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="earth.html">
-                        <button id="earth" type="submit" onclick="setTravelLog(4)" class="btn btn-outline-light">Earth</button> 
+                        <button id="earth" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 4)" class="btn btn-outline-light">Earth</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="mars.html">
-                        <button id="mars" type="submit" onclick="setTravelLog(5)" class="btn btn-outline-light">Mars</button> 
+                        <button id="mars" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 5)" class="btn btn-outline-light">Mars</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="jupiter.html">
-                        <button id="jupiter" type="submit" onclick="setTravelLog(6)" class="btn btn-outline-light">Jupiter</button> 
+                        <button id="jupiter" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 6)" class="btn btn-outline-light">Jupiter</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="saturn.html">
-                        <button id="saturn" type="submit" onclick="setTravelLog(7)" class="btn btn-outline-light">Saturn</button> 
+                        <button id="saturn" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 7)" class="btn btn-outline-light">Saturn</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="uranus.html">
-                        <button id="uranus" type="submit" onclick="setTravelLog(8)" class="btn btn-outline-light">Uranus</button> 
+                        <button id="uranus" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 8)" class="btn btn-outline-light">Uranus</button> 
                     </form>
                     <br/><br/>
                     <form method="get" action="neptune.html">
-                        <button id="neptune" type="submit" onclick="setTravelLog(9)" class="btn btn-outline-light">Neptune</button> 
+                        <button id="neptune" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 9)" class="btn btn-outline-light">Neptune</button> 
                     </form>
                     <br/><br/>
                     <form style="color:black;" method="get" action="about.html">
@@ -78,9 +78,8 @@
                 <div id="Neptune"></div>
             </section>
             <span id="player-messages">
-                <span class="simulate"><span class="players"></span></span>
+                <div class="simulate"><span class="players"></span></div>
             </span>
-            </br>
         </main>
     </body>
     <script src="solarsystem.js"></script>

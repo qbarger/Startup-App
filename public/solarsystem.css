@@ -228,7 +228,7 @@ span #player-messages {
     margin-top: 1%;
 }
 
-span.simulate {
+div.simulate {
     color:white;
     float: right;
     margin-top: 1%;

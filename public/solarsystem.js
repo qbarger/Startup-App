@@ -22,7 +22,6 @@ async function setTravelLog(planetNumber) {
         const travelLogText = responseData.travelLog;
         travelLog = JSON.parse(travelLogText);
         sessionStorage.setItem('travelLog', JSON.stringify(travelLog));
-        broadcastEvent(getPlayerName(), travelEvent, getElementById(planetNumber));
     } catch (error) {
         console.error('Error:', error);
         const travelLogText = sessionStorage.getItem('travelLog');
@@ -68,7 +67,7 @@ async function getTravelLog() {
 function getElementId(planetNumber) {
     switch (planetNumber) {
         case 1:
-            return 'sun';
+            return 'the sun';
         case 2:
             return 'mercury';
         case 3:
@@ -113,13 +112,13 @@ function configureWebSocket() {
         console.log("on message");
         const text = await event.data.text();
         const msg = JSON.parse(text);
-        displayMsg('player', msg.from, `traveled to ${msg.value}`);
+        displayMsg('players', msg.from, `traveled to ${msg.value}...`);
     };
 }
 
 function displayMsg(cls, from, msg) {
     const chatText = document.querySelector('#player-messages');
-    chatText.innerHTML = `<span class="simulate"><span class="${cls}">${from}</span> ${msg}</span></br>` + chatText.innerHTML;
+    chatText.innerHTML = `<div class="simulate"><span class="${cls}">${from}</span> ${msg}</div></br>` + chatText.innerHTML;
 }
 
 function broadcastEvent(from, type, value){
