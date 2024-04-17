@@ -64,3 +64,9 @@
 ##### * Logout resets history: Logging out resets the session storage and travelLog.
 ##### * Use MongoDB to store credentials: Stores user information in the database.
 ##### * Restricts functionality: You cannot explore or access the solar system until you have logged in. 
+
+### WebSocket Deliverable
+##### * Backend listens for WebSocket connection: Done.
+##### * Frontend makes WebSocket connection: Done.
+##### * Data sent over WebSocket connection: Done.
+##### * WebSocket data displayed: Users see whenever another user visits a different planet in real time.
