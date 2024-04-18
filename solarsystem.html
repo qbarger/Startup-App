@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="solarsystem.css">
+    </head>
+    <body>
+        <header>
+            <span class="player">
+                User: 
+                <span class="player-name"></span>
+            </span>
+            <br/><br/>
+            <div class="out">
+                <button type="button" class="btn btn-outline-light" onclick="logout()">Logout</button>  
+            </div>
+            <span>
+                <h4>EXPEDITION EXTRATERRESTRIAL</h4>
+            </span>
+            <br/>
+        </header>
+        <main>
+            <section>
+                    <form method="get" action="sun.html">
+                        <button id="sun" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 1)" class="btn btn-outline-light">Sun</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="mercury.html">
+                        <button id="mercury" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 2)" class="btn btn-outline-light">Mercury</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="venus.html">
+                        <button id="venus" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 3)" class="btn btn-outline-light">Venus</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="earth.html">
+                        <button id="earth" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 4)" class="btn btn-outline-light">Earth</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="mars.html">
+                        <button id="mars" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 5)" class="btn btn-outline-light">Mars</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="jupiter.html">
+                        <button id="jupiter" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 6)" class="btn btn-outline-light">Jupiter</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="saturn.html">
+                        <button id="saturn" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 7)" class="btn btn-outline-light">Saturn</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="uranus.html">
+                        <button id="uranus" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 8)" class="btn btn-outline-light">Uranus</button> 
+                    </form>
+                    <br/><br/>
+                    <form method="get" action="neptune.html">
+                        <button id="neptune" type="submit" onclick="broadcastEvent(getPlayerName(), 'travel', 9)" class="btn btn-outline-light">Neptune</button> 
+                    </form>
+                    <br/><br/>
+                    <form style="color:black;" method="get" action="about.html">
+                        <button type="submit" class="btn btn-light">About</button> 
+                    </form>
+            </section>
+            <section>
+                <div id="Sun"></div>
+                <div id="Mercury"></div>
+                <div id="Venus"></div>
+                <div id="Earth"></div>
+                <div id="Mars"></div>
+                <div id="Jupiter"></div>
+                <div id="Saturn"></div>
+                <div id="Uranus"></div>
+                <div id="Neptune"></div>
+            </section>
+            <span id="player-messages">
+                <div class="simulate"><span class="players"></span></div>
+            </span>
+        </main>
+    </body>
+    <script src="solarsystem.js"></script>
+</html>
