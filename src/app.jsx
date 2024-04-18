@@ -30,10 +30,6 @@ export default function App(){
 
                 <footer>
                     <hr/>  
-                    <form align="center" method="get" action="account.html">
-                        <span>Don't have an account? Make one  </span>
-                        <button type="submit" className="btn btn-outline-light">here</button>
-                    </form>
                     <br/>
                     <div align="center">
                         <span className="text-reset">Quenton Barger</span>
@@ -42,6 +38,7 @@ export default function App(){
                     <div align="center">
                         <a href="https://github.com/qbarger/Startup-App.git" target="_blank">Github</a>
                     </div>
+                    <br/>
                 </footer>
             </div>
         </BrowserRouter>

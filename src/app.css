@@ -13,7 +13,7 @@
     border-radius: 50%;
     position:absolute;
     margin-top: 37.5vh;
-    margin-left: 20px;
+    margin-left: 1%;
     animation: GFGMerc 7.23s infinite linear;
 }
 #Venus {
@@ -22,8 +22,8 @@
     height: 8px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     animation: GFGVen 18.455s infinite linear;
 }
 #Earth {
@@ -32,8 +32,8 @@
     height: 8px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     animation: GFGEarth 30s infinite linear;
 }
 #Mars {
@@ -42,8 +42,8 @@
     height: 5px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     animation: GFGMars 56.424s infinite linear;
 }
 #Jupiter {
@@ -52,8 +52,8 @@
     height: 18px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     animation: GFGJup 355.8s infinite linear;
 }
 #Saturn {
@@ -62,8 +62,8 @@
     height: 12px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     box-shadow: 0 1px 0 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
     animation: GFGSat 883.8s infinite linear;
 }
@@ -74,8 +74,8 @@
     height: 10px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     animation: GFGUra 2520.3s infinite linear;
 }
 #Neptune {
@@ -84,8 +84,8 @@
     height: 10px;
     border-radius: 50%;
     position: absolute;
-    margin-left: 20px;
     margin-top: 37.5vh;
+    margin-left: 1%;
     animation: GFGNep 4943.7s infinite linear;
 }
 @keyframes GFGMerc { 
@@ -184,21 +184,16 @@ body {
     margin-top: 1%;
 }
 
-.space-grotesk-one {
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
 player-name {
     color: white;
 }
 
-main {
-    flex: 1;
+main.solarMain {
     display: flex;
     flex-direction: row;
+    margin-left: 1%;
 }
+
 section:nth-child(1){
     flex: 1.25;
 }
@@ -208,18 +203,6 @@ section:nth-child(2) {
 section:nth-child(3) {
     float: right;
 }
-
-/*
-body {
-    margin-left: 1%;
-    margin-right: 1%;
-    font-family: Space Grotesk;
-    background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D'); 
-    background-color: black;
-    flex: 1;display: flex;
-    flex-direction: column;
-}
-*/
 
 span.player {
     color:white;
@@ -248,14 +231,6 @@ h4 {
     margin-top: 1%;
 }
 
-/*
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-}
-*/
-
 header {
     margin-top: 1%
 }
@@ -263,6 +238,15 @@ header {
 a {
     color: white;
 }
+
+form.about {
+    color: black;
+}
+
+section.solarSection {
+    flex: 1;
+}
+
 
 
 
