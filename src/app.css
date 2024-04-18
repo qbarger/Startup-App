@@ -251,6 +251,12 @@ hr {
     color: white;
 }
 
+img#felix {
+    width: 50%
+}
 
+main.about {
+    margin-left: 5%;
+}
 
 

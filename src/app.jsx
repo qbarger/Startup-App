@@ -25,7 +25,7 @@ export default function App(){
                     <Route path='/' element={<Login/>} exact />
                     <Route path='/solar' element={<Solar/>} />
                     <Route path='/planets' element={<Planets/>} />
-                    <Route path='/about' element={<About/>} />
+                    <Route path='/aboutpage' element={<About/>} />
                     <Route path='/create' element={<Create/>} />
                     <Route path='*' element={<NotFound/>} />
                 </Routes>

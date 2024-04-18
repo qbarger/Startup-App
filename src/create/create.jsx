@@ -44,7 +44,7 @@ export function Create(){
                 <input type="password" id="password" placeholder="Your password here" value={password} onChange={(user) => setPassword(user.target.value)} required/>
                 <br/>
                 <br/>
-                <button align="center" type="submit" onClick={createAccount}>Create</button>
+                <button align="center" className="btn btn-outline-light" type="submit" onClick={createAccount}>Create</button>
             </div>
             <br/>
             <br/>
