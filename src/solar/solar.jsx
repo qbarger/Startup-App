@@ -3,6 +3,7 @@ import React from "react";
 export function Solar(){
     return (
         <main className="solarMain">
+            <hr/>
             <section className="solarSection">
                 <form method="get" action="sun.html">
                     <button id="sun" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 1)" className="btn btn-outline-light">Sun</button> 
@@ -43,6 +44,7 @@ export function Solar(){
                 <form id="about" method="get" action="about.html">
                     <button type="submit" className="btn btn-light">About</button> 
                 </form>
+                <br/>
             </section>
             <section className="solarSection">
                 <div id="Sun"></div>
@@ -55,6 +57,7 @@ export function Solar(){
                 <div id="Uranus"></div>
                 <div id="Neptune"></div>
             </section>
+            <hr/>
         </main>
     );
 }

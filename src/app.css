@@ -191,7 +191,7 @@ player-name {
 main.solarMain {
     display: flex;
     flex-direction: row;
-    margin-left: 1%;
+    background-color: black;
 }
 
 section:nth-child(1){
@@ -245,6 +245,11 @@ form.about {
 
 section.solarSection {
     flex: 1;
+    margin-left: 1%;
+}
+
+hr {
+    color: white;
 }
 
 

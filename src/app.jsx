@@ -6,6 +6,7 @@ import {Login} from './login/login';
 import {About} from './about/about';
 import {Planets} from './planets/planets';
 import {Solar} from './solar/solar';
+import { Create } from "./create/create";
 
 function NotFound(){
     return <main>404: return to sender. Address unknown...</main>
@@ -17,7 +18,7 @@ export default function App(){
             <div>
                 <header>
                     <h1>Expedition Extraterrestrial</h1>
-                    <hr />
+                    <hr/>
                 </header>
                 
                 <Routes>
@@ -25,11 +26,12 @@ export default function App(){
                     <Route path='/solar' element={<Solar/>} />
                     <Route path='/planets' element={<Planets/>} />
                     <Route path='/about' element={<About/>} />
+                    <Route path='/create' element={<Create/>} />
                     <Route path='*' element={<NotFound/>} />
                 </Routes>
 
-                <footer>
-                    <hr/>  
+                <footer>  
+                    <hr/>
                     <br/>
                     <div align="center">
                         <span className="text-reset">Quenton Barger</span>
