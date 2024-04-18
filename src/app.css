@@ -207,10 +207,12 @@ span.player {
     color:white;
     float: right;
     margin-top: 1%;
+    margin-right: 1%;
 }
 
-div.out {
+span.out {
     float: right;
+    margin-right: 2%;
 }
 
 span #player-messages {

@@ -16,4 +16,6 @@ export function Planets(){
     );
 }
 
-function setPlanet(){}
+function setPlanet(){
+    
+}

@@ -12,11 +12,27 @@ function NotFound(){
     return <main>404: return to sender. Address unknown...</main>
 }
 
+function getPlayerName() {
+    return localStorage.getItem('username') ?? 'Unkown';
+}
+
 export default function App(){
+
+    const userNameEl = document.querySelector('.player-name');
+    //userNameEl.textContent = getPlayerName();   
+    
+
     return (
         <BrowserRouter>
             <div>
                 <header>
+                    <span className="player">
+                    User: 
+                    <span className="player-name"></span>
+                    </span>
+                    <span className="out">
+                        <button type="button" className="btn btn-outline-light">Logout</button>  
+                    </span>
                     <h1>Expedition Extraterrestrial</h1>
                     <hr/>
                 </header>
@@ -24,7 +40,7 @@ export default function App(){
                 <Routes>
                     <Route path='/' element={<Login/>} exact />
                     <Route path='/solar' element={<Solar/>} />
-                    <Route path='/planets' element={<Planets/>} />
+                    <Route path='/sun' element={<Planets/>} />
                     <Route path='/aboutpage' element={<About/>} />
                     <Route path='/create' element={<Create/>} />
                     <Route path='*' element={<NotFound/>} />

@@ -1,47 +1,103 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 export function Solar(){
+
+    const navigate = useNavigate();
+
+    function explore(value){
+        const planet = getElementId(value);
+        
+        switch(planet){
+            case 'the sun':
+                navigate('/sun');
+            case 'mercury':
+                navigate('/mercury');
+            case 'venus':
+                navigate('/venus');
+            case 'earth':
+                navigate('/earth');
+            case 'mars':
+                navigate('/mars');
+            case 'jupiter':
+                navigate('/jupiter');
+            case 'saturn':
+                navigate('/saturn');
+            case 'uranus':
+                navigate('uranus');
+            case 'neptune':
+                navigate('neptune');
+            default:
+                return null;
+        }
+    }
+
+    function getElementId(planetNumber) {
+        switch (planetNumber) {
+            case 1:
+                return 'the sun';
+            case 2:
+                return 'mercury';
+            case 3:
+                return 'venus';
+            case 4:
+                return 'earth';
+            case 5:
+                return 'mars';
+            case 6:
+                return 'jupiter';
+            case 7:
+                return 'saturn';
+            case 8:
+                return 'uranus';
+            case 9:
+                return 'neptune';
+            default:
+                return null;
+        }
+    }
+
     return (
         <main className="solarMain">
             <hr/>
             <section className="solarSection">
-                <form method="get" action="sun.html">
-                    <button id="sun" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 1)" className="btn btn-outline-light">Sun</button> 
+                <form>
+                    <button id="sun" type="submit" onClick={explore(1)} className="btn btn-outline-light">Sun</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="mercury.html">
-                    <button id="mercury" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 2)" className="btn btn-outline-light">Mercury</button> 
+                <form>
+                    <button id="mercury" type="submit" onClick={explore(2)} className="btn btn-outline-light">Mercury</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="venus.html">
-                    <button id="venus" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 3)" className="btn btn-outline-light">Venus</button> 
+                <form>
+                    <button id="venus" type="submit" onClick={explore(3)} className="btn btn-outline-light">Venus</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="earth.html">
-                    <button id="earth" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 4)" className="btn btn-outline-light">Earth</button> 
+                <form>
+                    <button id="earth" type="submit" onClick={explore(4)} className="btn btn-outline-light">Earth</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="mars.html">
-                    <button id="mars" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 5)" className="btn btn-outline-light">Mars</button> 
+                <form>
+                    <button id="mars" type="submit" onClick={explore(5)} className="btn btn-outline-light">Mars</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="jupiter.html">
-                    <button id="jupiter" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 6)" className="btn btn-outline-light">Jupiter</button> 
+                <form>
+                    <button id="jupiter" type="submit" onClick={explore(6)} className="btn btn-outline-light">Jupiter</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="saturn.html">
-                    <button id="saturn" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 7)" className="btn btn-outline-light">Saturn</button> 
+                <form>
+                    <button id="saturn" type="submit" onClick={explore(7)} className="btn btn-outline-light">Saturn</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="uranus.html">
-                    <button id="uranus" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 8)" className="btn btn-outline-light">Uranus</button> 
+                <form>
+                    <button id="uranus" type="submit" onClick={explore(8)} className="btn btn-outline-light">Uranus</button> 
                 </form>
                 <br/><br/>
-                <form method="get" action="neptune.html">
-                    <button id="neptune" type="submit" onClick="broadcastEvent(getPlayerName(), 'travel', 9)" className="btn btn-outline-light">Neptune</button> 
+                <form>
+                    <button id="neptune" type="submit" onClick={explore(9)} className="btn btn-outline-light">Neptune</button> 
                 </form>
                 <br/><br/>
-                <form id="about" method="get" action="about.html">
+                <form id="about">
                     <button type="submit" className="btn btn-light">About</button> 
                 </form>
                 <br/>
