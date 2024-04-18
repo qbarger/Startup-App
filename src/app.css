@@ -191,7 +191,6 @@ player-name {
 main.solarMain {
     display: flex;
     flex-direction: row;
-    background-color: black;
 }
 
 section:nth-child(1){

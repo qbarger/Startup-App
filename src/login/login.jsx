@@ -1,28 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router";
 
-(async () => {
-    const userName = localStorage.getItem('username');
-    if (userName) {
-        document.querySelector('#player-name').textContent = userName;
-    }
-})();
 
 export function Login(){
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
-    const onSubmit = async (values) => {
-        const userName = document.querySelector('#name')?.value;
-        const password = document.querySelector('#password')?.value;
+    async function loginUser() {
+
         const response = await fetch(`/api/auth/login`, {
             method: 'post',
-            body: JSON.stringify({ name: userName, password: password }),
+            body: JSON.stringify({ name: username, password: password }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
         });
         if(response.ok){
-            localStorage.setItem('username', userName);
-            window.location.href = 'solarsystem.html';
+            localStorage.setItem('username', username);
+            navigate("/solar");
         } else {
             const body = await response.json();
             const modalEL = document.querySelector('#msgModal');
@@ -40,14 +37,14 @@ export function Login(){
             <br/>
             <div align="center">
                 <label htmlFor="Username">Username:</label>
-                <input type="text" id="name" placeholder="Your name here" required/>
+                <input type="text" id="name" placeholder="Your name here" value={username} onChange={(user) => setUsername(user.target.value)} required/>
                 <br/>
                 <br/>
                 <label htmlFor="password">Password :</label>
-                <input type="password" id="password" placeholder="Your password here" required/>
+                <input type="password" id="password" placeholder="Your password here" value={password} onChange={(user) => setPassword(user.target.value)} required/>
                 <br/>
                 <br/>
-                <button align="center" type="submit" onClick={() => onSubmit()}>Login</button>
+                <button align="center" type="submit" onClick={loginUser}>Login</button>
             </div>
             <br/>
             <br/>
@@ -68,31 +65,4 @@ export function Login(){
             <br/>
         </main>
     );
-}
-
-function loginUser(){
-    signInOrUp(`/api/auth/login`);
-}
-
-async function signInOrUp(){
-    const userName = document.querySelector('#name')?.value;
-    const password = document.querySelector('#password')?.value;
-    const response = await fetch(`/api/auth/login`, {
-        method: 'post',
-        body: JSON.stringify({ name: userName, password: password }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    });
-
-    if(response.ok){
-        localStorage.setItem('username', userName);
-        window.location.href = 'solarsystem.html';
-    } else {
-        const body = await response.json();
-        const modalEL = document.querySelector('#msgModal');
-        modalEL.querySelector('.modal-body').textContent = `Error: ${body.msg}`;
-        const msgModal = new bootstrap.Modal(modalEL, {});
-        msgModal.show();
-    }
 }
