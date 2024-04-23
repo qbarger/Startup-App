@@ -8,12 +8,19 @@ import {Planets} from './planets/planets';
 import {Solar} from './solar/solar';
 import { Create } from "./create/create";
 
-
 function NotFound(){
     return <main>404: return to sender. Address unknown...</main>
 }
 
+function getPlayerName() {
+    return localStorage.getItem('username') ?? 'Unkown';
+}
+
 export default function App(){
+
+    const userNameEl = document.querySelector('.player-name');
+    //userNameEl.textContent = getPlayerName();   
+    
 
     return (
         <BrowserRouter>
@@ -24,7 +31,7 @@ export default function App(){
                     <span className="player-name"></span>
                     </span>
                     <span className="out">
-                        <button type="button" className="btn btn-outline-light" onClick={() => logout()}>Logout</button>  
+                        <button type="button" className="btn btn-outline-light">Logout</button>  
                     </span>
                     <h1>Expedition Extraterrestrial</h1>
                     <hr/>

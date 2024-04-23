@@ -4,19 +4,6 @@ import { useNavigate } from "react-router";
 export function Solar(){
 
     const navigate = useNavigate();
-    
-    function logout() {
-        fetch(`/api/auth/logout`, {
-          method: 'delete',
-        })
-          .catch(() => {
-            // Logout failed. Assuming offline
-          })
-          .finally(() => {
-            localStorage.removeItem('userName');
-            navigate('/');
-          });
-      }
 
     function explore(value){
         const planet = getElementId(value);

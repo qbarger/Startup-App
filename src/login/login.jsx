@@ -24,7 +24,7 @@ export function Login(){
             const body = await response.json();
             const modalEL = document.querySelector('#msgModal');
             modalEL.querySelector('.modal-body').textContent = `Error: ${body.msg}`;
-            //const msgModal = new bootstrap.Modal(modalEL, {});
+            const msgModal = new bootstrap.Modal(modalEL, {});
             msgModal.show();
         }
     };
