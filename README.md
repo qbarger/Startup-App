@@ -70,8 +70,3 @@
 ##### * Frontend makes WebSocket connection: Done.
 ##### * Data sent over WebSocket connection: Done.
 ##### * WebSocket data displayed: Users see whenever another user visits a different planet in real time.
-
-### React Deliverable
-##### * Bundled and transpiled: Done.
-##### * Components: Login and solar system components working.
-##### * Router: Routing between login and solar system components.

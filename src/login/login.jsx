@@ -48,9 +48,9 @@ export function Login(){
             </div>
             <br/>
             <br/>
-            <form align="center">
+            <form align="center" method="get" action="/create">
                 <span>Don't have an account? Make one  </span>
-                <button type="submit" onclick="/create" className="btn btn-outline-light">here</button>
+                <button type="submit" className="btn btn-outline-light">here</button>
             </form>
             <div className="modal fade" id="msgModal" tabIndex="-1">
                 <div className="modal-dialog modal-dialog-centered">
